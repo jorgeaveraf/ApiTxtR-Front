@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consumo de Rest-Api Users</title>
+</head>
+<body>
+    <p>Consumo de Rest-Api Users</p>
+
+    <div>
+        <label>URL de la INE</label>
+        <input type="text" id="ineUrl">
+    </div>
+
+    <button onclick="agregarINE()">Agregar INE</button>
+    <button onclick="getINEs()">Mostrar INEs</button>
+
+    <div id="result"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="callRestapi.js"></script>
+    <link rel="stylesheet" type="text/css" href="rest.css">
+</body>
+</html>
