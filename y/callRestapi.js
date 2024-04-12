@@ -1,4 +1,4 @@
-var url = "http://localhost:3300/Api/ines";
+var url = "https://complete-verve-417716.uc.r.appspot.com/Api/ines";
 
 function agregarINE() {
     const ineUrl = $('#ineUrl').val();
@@ -7,6 +7,8 @@ function agregarINE() {
     } else {
         console.error("Debe proporcionar una URL de INE.");
     }
+
+    getINEs();
 }
 
 
@@ -97,6 +99,10 @@ function mostrarInformacion(jsonData) {
     }
 }
 
+function agregarImagenURL(url) {
+    return '<img src="' + url + '" style="width: 70px; height: 45px;">';
+}
+
 function getINEs() {
     console.log(url);
 
@@ -112,7 +118,7 @@ function getINEs() {
             "<th>Nombre</th>" +
             "<th>Calle</th>" +
             "<th>Colonia</th>" +
-            "<th>Código Postal</th>" +
+            "<th>Codigo Postal</th>" +
             "<th>Ciudad</th>" +
             "<th>Estado</th>" +
  //           "<th>CURP</th>" +
@@ -134,7 +140,7 @@ function getINEs() {
    //             "<td>" + ine.curp + "</td>" +
                 "<td>" + ine.fechaNacimiento + "</td>" +
                 "<td>" + ine.sexo + "</td>" +
-                "<td>" + ine.url + "</td>" +
+                "<td>" + agregarImagenURL(ine.url) + "</td>" +
                 "</tr>";
         });
 
